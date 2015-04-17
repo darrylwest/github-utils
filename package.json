@@ -1,0 +1,18 @@
+{
+  "name": "github-utils",
+  "version": "0.90.100",
+  "description": "utilities for accessing github data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "utility"
+  ],
+  "author": "darryl.west <darryl.west@raincitysoftware.com> (http://blog.raincitysoftware.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.7.0",
+    "superagent": "^1.2.0"
+  }
+}

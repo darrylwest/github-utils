@@ -1,0 +1,8 @@
+__MAC*
+.DS_Store
+*.gz
+.idea
+*.bak
+*.log
+*.swp
+node_modules
