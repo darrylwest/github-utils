@@ -13,7 +13,7 @@ var fs = require('fs'),
     lastRun;
 
 var run = function() {
-    var cmd = './scripts/check-issues.js',
+    var cmd = './scripts/query-issues.js',
         runner = spawn( cmd, [ ] );
 
     lastRun = Date.now();
