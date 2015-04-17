@@ -13,11 +13,11 @@ var fs = require('fs'),
     lastRun;
 
 var run = function() {
-    var runner = spawn( './scripts/IssueChecker', [ 'test' ] );
+    var runner = spawn( './scripts/check-issues.js', [ ] );
 
     lastRun = Date.now();
 
-    process.stdout.write( clearScreen ); 
+    process.stdout.write( clearScreen );
     if (files.length > 0) {
         console.log('Changed files:');
         files.forEach(function(file) {
@@ -35,7 +35,6 @@ var run = function() {
     runner.stderr.on('data', function( data ) {
         process.stdout.write( data );
     });
-
 
     runner.on('close', function(code) {
         if (code !== 0) {
@@ -64,11 +63,11 @@ var changeHandler = function(event, filename) {
 
 run();
 
-fs.watch( 'app/', { recursive:true }, changeHandler );
-fs.watch( 'test/', { recursive:true }, changeHandler );
+fs.watch( 'lib/', { recursive:true }, changeHandler );
+fs.watch( 'scripts/', { recursive:true }, changeHandler );
 
 setInterval(function() {
-    if (Date.now() - lastRun > (1000 * 60 * 5)) {
+    if (Date.now() - lastRun > (1000 * 60 * 10)) {
         run();
     }
 }, 1000 * 60);
