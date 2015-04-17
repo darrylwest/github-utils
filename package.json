@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^3.7.0",
-    "simple-node-logger": "^0.92.21",
-    "superagent": "^1.2.0"
+    "request": "^2.55.0",
+    "simple-node-logger": "^0.92.21"
   }
 }
