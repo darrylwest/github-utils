@@ -4,7 +4,10 @@
 // 2015.04.18
 'use strict';
 
-var ScriptRunner = require('../lib/ScriptRunner');
+var ScriptRunner = require('../lib/ScriptRunner'),
+    opts = {
+        commands:[ 'git pull', 'git co master', 'git pull', 'git co develop' ]
+    };
 
-ScriptRunner.pullAll();
+ScriptRunner.pullAll( opts );
 
